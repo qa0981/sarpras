@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('pengaduan', \App\Http\Controllers\PengaduanController::class);
 Route::resource('sarpras', \App\Http\Controllers\SarprasController::class);
+
+Route::middleware(['auth', 'isAdmin'])->group(function () {
+    Route::get('/dashboard', [HomeController::class, 'index']);
+});
