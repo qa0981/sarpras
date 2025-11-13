@@ -71,45 +71,40 @@
                             <div class="form-group mb-3">
                                 <label class="form-label">Masukkan Kode</label>
                                 <input type="text" name="inpkode"
-                                    class="form-control
-                                    @error('kode')
-                                        is-invalid
-                                    @enderror"
-                                    name="example-text-input" placeholder="Masukkan Kode Inventaris" value="{{ old('inpkode') }}">
+                                    class="form-control @error('kode') is-invalid @enderror"
+                                    placeholder="Masukkan Kode Inventaris" value="{{ old('inpkode') }}">
                                 @error('kode')
                                     <span class="invalid-feedback">{{ $message }}</span>
                                 @enderror
                             </div>
+
                             <div class="form-group mb-3">
                                 <label class="form-label">Nama Barang</label>
                                 <input type="text" name="inpbarang"
-                                    class="form-control
-                                    @error('barang')
-                                        is-invalid
-                                    @enderror"
-                                    name="example-text-input" placeholder="Input Nama Barang" value="{{ old('inpbarang') }}">
+                                    class="form-control @error('barang') is-invalid @enderror"
+                                    placeholder="Input Nama Barang" value="{{ old('inpbarang') }}">
                                 @error('barang')
                                     <span class="invalid-feedback">{{ $message }}</span>
                                 @enderror
                             </div>
+
                             <div class="form-group mb-3">
                                 <label class="form-label">Lokasi</label>
                                 <input type="text" name="inplokasi"
-                                    class="form-control
-                                    @error('lokasi')
-                                        is-invalid
-                                    @enderror"
-                                    name="example-text-input" placeholder="Input Lokasi" value="{{ old('inplokasi') }}">
+                                    class="form-control @error('lokasi') is-invalid @enderror"
+                                    placeholder="Input Lokasi" value="{{ old('inplokasi') }}">
                                 @error('lokasi')
                                     <span class="invalid-feedback">{{ $message }}</span>
                                 @enderror
                             </div>
+
                             <hr>
-                            <div class="input-group">
+
+                            <div class="d-flex gap-2">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
-                        </form>
                                 <a class="btn btn-secondary" href="{{ route('sarpras.index') }}">Kembali</a>
                             </div>
+                        </form>
                     </div>
                 </div>
             </div>
