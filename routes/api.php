@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+Route::resource('sarpras', \App\Http\Controllers\SarprasController::class);
+Route::resource('pengaduan', \App\Http\Controllers\PengaduanController::class);

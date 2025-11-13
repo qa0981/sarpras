@@ -1,4 +1,4 @@
-\<!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -62,7 +62,7 @@
             <div class="col-md-10">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-                    <h1 class="h2">ini halaman Pengaduan</h1>
+                    <h1 class="h2">Pengaduan Sarana Prasarana</h1>
                 </div>
                 <div class="row">
                     <div class="col-md-3">

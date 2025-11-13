@@ -31,7 +31,21 @@ class SarprasController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): RedirectResponse
+    // public function store(Request $request): RedirectResponse
+    // {
+    //     // $data = new sarpras;
+    //     // $data->kode = $request->inpkode;
+    //     // $data->barang = $request->inpbarang;
+    //     // $data->lokasi = $request->inplokasi;
+    //     // $data->save();
+
+    //     // session()->flash('success', 'Data Berhasil Ditambahkan.');
+
+    //     // return redirect()->route('sarpras.index');
+        
+    // }
+
+    public function store(Request $request)
     {
         $data = new sarpras;
         $data->kode = $request->inpkode;
@@ -39,9 +53,11 @@ class SarprasController extends Controller
         $data->lokasi = $request->inplokasi;
         $data->save();
 
-        session()->flash('success', 'Data Berhasil Ditambahkan.');
-
-        return redirect()->route('sarpras.index');
+        return response()->json([
+            'success' => true,
+            'message' => 'Data berhasil ditambahkan',
+            'data' => $data
+        ], 201);
     }
 
     /**
