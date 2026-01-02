@@ -25,6 +25,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
     
-    Route::resource('pengaduan', PengaduanController::class);
-    Route::resource('sarpras', SarprasController::class);
+    // Route::resource('pengaduan', PengaduanController::class);
+    // Route::resource('sarpras', SarprasController::class);
 });
