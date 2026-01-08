@@ -5,6 +5,8 @@
 /storage/*.key
 .env
 .env.
+composer.json
+package-lock.json
 .phpunit.result.cache
 Homestead.yaml
 Homestead.json
@@ -28,7 +30,11 @@ Thumbs.db
 *.crt
 *.cer
 *.pub
-*.json
 
 # Laravel Mix / Vite
 /public/build
+public/mix-manifest.json
+
+public/vendor/mckenziearts/laravel-notify/mix-manifest.json
+
+lang/en.json
