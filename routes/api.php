@@ -2,7 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\Api\AuthController;
+=======
+use App\Http\Controllers\AuthController;
+>>>>>>> origin/main
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +29,6 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::resource('sarpras', \App\Http\Controllers\SarprasController::class);
 Route::resource('pengaduan', \App\Http\Controllers\PengaduanController::class);
+
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
