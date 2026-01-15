@@ -10,6 +10,7 @@ class sarpras extends Model
     use HasFactory;
 
     protected $table = "sarpras";
+<<<<<<< Updated upstream
 
     protected $fillable = [
         'kode',
@@ -17,5 +18,8 @@ class sarpras extends Model
         'lokasi'
     ];
 
+=======
+    protected $fillable = ['kode', 'barang', 'lokasi'];
+>>>>>>> Stashed changes
     public $timestamps = true;
 }

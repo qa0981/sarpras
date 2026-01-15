@@ -7,11 +7,25 @@ use App\Models\sarpras;
 
 class SarprasController extends Controller
 {
+<<<<<<< Updated upstream
     // GET /api/sarpras
     public function index()
     {
         $data = sarpras::all();
         return response()->json($data);
+=======
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        $data = sarpras::all();
+
+        return response()->json([
+            'success' => true,
+            'data' => $data
+        ], 200);
+>>>>>>> Stashed changes
     }
 
     // POST /api/sarpras
@@ -69,4 +83,30 @@ class SarprasController extends Controller
             'message' => 'Data berhasil dihapus'
         ]);
     }
+<<<<<<< Updated upstream
 }
+=======
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy($id)
+    {
+        $data = Sarpras::find($id);
+
+        if (!$data) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Data tidak ditemukan'
+            ], 404);
+        }
+
+        $data->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Data berhasil dihapus'
+        ]);
+    }
+}
+>>>>>>> Stashed changes
